@@ -1,0 +1,114 @@
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    padding: 0 38px;
+
+    &>.titleLogo {
+        width: 236px;
+        height: 74px;
+    }
+
+    &>.hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        cursor: pointer;
+        height: 55px;
+        width: 55px;
+
+        &>span,
+        span::before,
+        span::after {
+            content: '';
+            display: block;
+            background: #303030;
+            transition: 0.5s;
+            position: absolute;
+            height: 4px;
+            width: 55px;
+            border-radius: 4px;
+        }
+
+        &>span::before {
+            bottom: 15px;
+        }
+
+        &>span::after {
+            top: 15px;
+        }
+    }
+
+    &>.drawerInput {
+        display: none;
+
+        &:checked {
+            ~.hamburger span {
+                background: rgba(255, 255, 255, 0);
+            }
+
+            ~.hamburger span::before {
+                bottom: 0;
+                transform: rotate(45deg);
+                background: #ffffff;
+            }
+
+            ~.hamburger span::after {
+                top: 0;
+                transform: rotate(-45deg);
+                background: #ffffff;
+            }
+
+            ~.menu {
+                left: calc(100vw - 396px);
+            }
+        }
+    }
+
+    &>.menu {
+        width: 396px;
+        height: 100vh;
+        position: fixed;
+        transition: all 0.5s;
+        top: 0;
+        left: 100vw;
+        z-index: 80;
+        background: #947b6d;
+        padding: 0 40px;
+
+        &>.menuTitle {
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            height: 100px;
+
+            &>p {
+                font-size: 32px;
+            }
+        }
+
+        &>ul {
+            list-style: none;
+
+            &>li {
+                display: flex;
+                align-items: center;
+                height: 32px;
+                margin: 32px 0;
+                padding-left: 8px;
+                border-left: solid 5px #ffffff;
+
+                &>a {
+                    color: #ffffff;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
