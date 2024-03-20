@@ -1,10 +1,15 @@
+@use "/src/styles/colorPalette.scss";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
 body {
     font-family: 'Noto Sans JP';
 }
 
+p {
+    color: colorPalette.$black;
+}
+
 a {
     text-decoration: none;
-    color: #000000;
+    color: colorPalette.$black;
 }

@@ -1,5 +1,5 @@
-import styles from "@/app/_component/Header/Header.module.scss";
-import titleLogo from "@public/images/title.svg";
+import styles from "@components/Header/Header.module.scss";
+import titleLogo from "@images/title.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,7 +20,7 @@ const Header = () => {
             <Link href="/about">つくオケについて</Link>
           </li>
           <li>
-            <Link href="/info">新歓情報</Link>
+            <Link href="/event">新歓情報</Link>
           </li>
           <li>
             <Link href="/activity">1年間の活動の流れ</Link>
@@ -29,10 +29,10 @@ const Header = () => {
             <Link href="/introduction">セクション・パート紹介</Link>
           </li>
           <li>
-            <Link href="/interview">先輩インタビュー</Link>
+            <Link href="/interview">団員インタビュー</Link>
           </li>
           <li>
-            <Link href="/qa">Q&A</Link>
+            <Link href="/faq">Q&A</Link>
           </li>
           <li>
             <Link href="/contact">お問い合わせ</Link>
