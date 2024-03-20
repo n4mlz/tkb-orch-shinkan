@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "ress";
-import "@/app/_styles/globals.scss";
+import "@styles/globals.scss";
 
 export const metadata: Metadata = {
   title: "筑波大学 管弦楽団 新歓ウェブサイト",
