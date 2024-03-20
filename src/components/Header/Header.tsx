@@ -32,7 +32,7 @@ const Header = () => {
             <Link href="/interview">団員インタビュー</Link>
           </li>
           <li>
-            <Link href="/qa">Q&A</Link>
+            <Link href="/faq">Q&A</Link>
           </li>
           <li>
             <Link href="/contact">お問い合わせ</Link>

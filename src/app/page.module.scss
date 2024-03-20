@@ -1,7 +1,59 @@
+@use "/src/styles/colorPalette.scss";
+
 .pageContainer {
     &>.heroImage {
         object-fit: cover;
         width: 100vw;
         height: 100vh;
     }
+
+    &>.welcomeEvent {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 150px;
+
+        &>.eventList {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 50%;
+            gap: 40px;
+
+            &>.eventListContent {
+                font-size: 16px;
+
+                & td {
+                    padding: 10px;
+                }
+            }
+        }
+
+        &>.transitionButtonWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        }
+    }
+}
+
+.sectionTitle {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.transitionButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 70px;
+    border-radius: 35px;
+    background: colorPalette.$gold;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
