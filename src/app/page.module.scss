@@ -1,6 +1,10 @@
 @use "/src/styles/colorPalette.scss";
 
 .pageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
     &>.heroImage {
         object-fit: cover;
         width: 100vw;
@@ -13,7 +17,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 50px 150px;
+        padding: 0 150px;
 
         &>.eventList {
             display: flex;
@@ -32,7 +36,7 @@
             }
         }
 
-        &>.transitionButtonWrapper {
+        &>.welcomeEventButtonWrapper {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -40,9 +44,164 @@
             width: 50%;
         }
     }
+
+    &>.about {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 65px;
+        padding: 100px 0;
+        background:
+            linear-gradient(rgba(74, 22, 22, 0.3), rgba(74, 22, 22, 0.3)),
+            url("/images/about.jpg") center top / cover;
+
+        &>.aboutContent {
+            width: 75%;
+            max-width: 700px;
+            color: colorPalette.$white;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+
+    &>.introduction {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        padding: 70px;
+
+        &>.sectionIntroduction {
+            width: 35%;
+            max-width: 540px;
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            padding-top: 100px;
+            background:
+                linear-gradient(rgba(74, 22, 22, 0.3), rgba(74, 22, 22, 0.3)),
+                url("/images/section.png") center top / cover;
+        }
+
+        &>.partIntroduction {
+            width: 35%;
+            max-width: 540px;
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            padding-top: 100px;
+            background:
+                linear-gradient(rgba(74, 22, 22, 0.3), rgba(74, 22, 22, 0.3)),
+                url("/images/part.png") center top / cover;
+        }
+    }
+
+    & .interview {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        &>.interviewSummary {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+
+            padding: 0 150px;
+
+            &>.interviewDescription {
+                font-size: 16px;
+            }
+        }
+
+        &>.sliderContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0;
+            background: #edd7d7;
+
+            &>.slider {
+                width: 90%;
+
+                .interviewThumb {
+                    width: 345px;
+                    height: 230px;
+                }
+            }
+        }
+    }
+
+    &>.moreInfo {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 15px;
+        padding: 50px 60px;
+
+        &>.moreInfoBlock {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            width: 45%;
+            padding: 25px 40px;
+            border-radius: 30px;
+            background: colorPalette.$gray;
+
+            & .moreInfoSummary {
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                align-items: flex-start;
+                gap: 20px;
+
+                &>.moreInfoDescription {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    &>.contact {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 50px 150px;
+
+        td {
+            padding: 8px;
+        }
+    }
 }
 
 .sectionTitle {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.sectionTitleWhite {
+    color: colorPalette.$white;
     font-size: 32px;
     font-weight: 500;
 }
@@ -56,4 +215,11 @@
     border-radius: 35px;
     background: colorPalette.$gold;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    &>.transitionButtonText {
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        color: colorPalette.$white;
+    }
 }

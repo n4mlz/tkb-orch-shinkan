@@ -1,13 +1,16 @@
+@use "/src/styles/colorPalette.scss";
+
 .container {
     position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 80;
     width: 100vw;
     height: 80px;
     padding: 0 24px;
-    background-color: #ffffff;
+    background-color: colorPalette.$white;
 
     &>.titleLogo {
         width: auto;
@@ -77,21 +80,22 @@
         height: 100vh;
         position: fixed;
         transition: all 0.5s;
-        z-index: 80;
+        z-index: 90;
         top: 0;
         left: 100vw;
         padding: 0 40px;
-        background: #947b6d;
+        background: colorPalette.$brown;
 
         &>.menuTitle {
             display: flex;
             align-items: center;
-            color: #ffffff;
+            color: colorPalette.$white;
             height: 100px;
 
             &>p {
                 font-size: 32px;
                 font-weight: 500;
+                color: colorPalette.$white;
             }
         }
 
@@ -104,12 +108,12 @@
                 height: 32px;
                 margin: 32px 0;
                 padding-left: 16px;
-                border-left: solid 5px #ffffff;
+                border-left: solid 5px colorPalette.$white;
 
                 &>a {
                     font-size: 24px;
                     font-weight: 500;
-                    color: #ffffff;
+                    color: colorPalette.$white;
                 }
             }
         }
