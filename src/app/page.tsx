@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";
 import { ja } from "date-fns/locale";
@@ -10,6 +9,7 @@ import Header from "@components/Header/Header";
 import styles from "./page.module.scss";
 import { interviewThumbList } from "@/utils/imageList";
 import heroImage from "@images/hero.jpg";
+import Img from "@/components/Img";
 
 const TransitionButton = (props: { link: string; text: string }) => {
   return (
@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <div className={styles.pageContainer}>
       <Header />
-      <Image className={styles.heroImage} src={heroImage} alt="トップ画像" />
+      <Img className={styles.heroImage} src={heroImage} alt="トップ画像" />
       <div className={styles.welcomeEvent}>
         <div className={styles.eventList}>
           <p className={styles.sectionTitle}>直近の新歓イベント</p>
@@ -94,13 +94,15 @@ const Home = () => {
                 autoplay: true,
                 interval: 3000,
                 rewind: true,
+                pagination: false,
+                pauseOnHover: true,
                 perPage: 3,
                 perMove: 1,
               }}>
               {interviewThumbList.map((thumb, index) => (
-                <SplideSlide key={index}>
+                <SplideSlide key={index} className={styles.slide}>
                   {/* TODO: ここをリンクに対応する */}
-                  <Image className={styles.interviewThumb} src={thumb} alt="団員インタビューのサムネイル" />
+                  <Img className={styles.interviewThumb} src={thumb} alt="団員インタビューのサムネイル" />
                 </SplideSlide>
               ))}
             </Splide>
