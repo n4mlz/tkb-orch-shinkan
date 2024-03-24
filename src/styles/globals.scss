@@ -1,5 +1,9 @@
 @use "/src/styles/colorPalette.scss";
 
+body {
+    font-family: var(--font-inter), var(--font-noto-sans-jp);
+}
+
 p {
     color: colorPalette.$black;
 }
