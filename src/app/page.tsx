@@ -52,7 +52,9 @@ const Home = () => {
   return (
     <div className={styles.pageContainer}>
       <Header />
+
       <Img className={styles.heroImage} src={heroImage} alt="トップ画像" />
+
       <div className={styles.welcomeEventWrapper}>
         <div className={styles.welcomeEvent}>
           <div className={styles.eventList}>
@@ -73,6 +75,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className={styles.about}>
         <p className={styles.sectionTitleWhite}>つくオケとは</p>
         <p className={styles.aboutContent}>
@@ -86,6 +89,7 @@ const Home = () => {
         </p>
         <TransitionButton link="/about" text="団体について" />
       </div>
+
       <div className={styles.introduction}>
         <div className={styles.sectionIntroduction}>
           <p className={styles.sectionTitleWhite}>セクション紹介</p>
@@ -96,6 +100,20 @@ const Home = () => {
           <TransitionButton link="/introduction" text="詳細を見る" />
         </div>
       </div>
+
+      <div className={styles.activity}>
+        <div className={styles.forPc}>
+          <TransitionButton link="/activity" text="詳細を見る" />
+        </div>
+        <div className={styles.activitySummary}>
+          <div className={styles.sectionTitleWhite}>1年間の活動の流れ</div>
+          <div className={styles.activityDescription}>つくオケの一年間の活動スケジュールを紹介しています。</div>
+        </div>
+        <div className={styles.forMobile}>
+          <TransitionButton link="/activity" text="詳細を見る" />
+        </div>
+      </div>
+
       <div className={styles.interview}>
         <div className={styles.interviewSummary}>
           <div className={styles.sectionTitle}>団員インタビュー</div>
@@ -117,6 +135,7 @@ const Home = () => {
         </div>
         <TransitionButton link="/interview" text="インタビュー一覧" />
       </div>
+
       <div className={styles.moreInfo}>
         <div className={styles.moreInfoBlock}>
           <div className={styles.moreInfoSummary}>
@@ -135,6 +154,7 @@ const Home = () => {
           <TransitionButton link="/joinus" text="詳細を見る" />
         </div>
       </div>
+
       <div className={styles.contact}>
         <p className={styles.sectionTitle}>お問い合わせ</p>
         <table>
