@@ -22,6 +22,20 @@ const TransitionButton = (props: { link: string; text: string }) => {
 };
 
 const Home = () => {
+  const splideOptions = {
+    autoplay: true,
+    interval: 3000,
+    rewind: true,
+    pagination: false,
+    pauseOnHover: true,
+    perPage: 3,
+    perMove: 1,
+    breakpoints: {
+      768: { perPage: 1 },
+      1280: { perPage: 3 },
+    },
+  };
+
   type welcomeEvent = {
     date: Date;
     name: string;
@@ -39,22 +53,24 @@ const Home = () => {
     <div className={styles.pageContainer}>
       <Header />
       <Img className={styles.heroImage} src={heroImage} alt="トップ画像" />
-      <div className={styles.welcomeEvent}>
-        <div className={styles.eventList}>
-          <p className={styles.sectionTitle}>直近の新歓イベント</p>
-          <table className={styles.eventListContent}>
-            <tbody>
-              {eventList.map((welcomeEvent, index) => (
-                <tr key={index}>
-                  <td>{getFormattedDate(welcomeEvent.date)}</td>
-                  <td>{welcomeEvent.name}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className={styles.welcomeEventButtonWrapper}>
-          <TransitionButton link="/event" text="新歓情報" />
+      <div className={styles.welcomeEventWrapper}>
+        <div className={styles.welcomeEvent}>
+          <div className={styles.eventList}>
+            <p className={styles.sectionTitle}>直近の新歓イベント</p>
+            <table className={styles.eventListContent}>
+              <tbody>
+                {eventList.map((welcomeEvent, index) => (
+                  <tr key={index}>
+                    <td>{getFormattedDate(welcomeEvent.date)}</td>
+                    <td>{welcomeEvent.name}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className={styles.welcomeEventButtonWrapper}>
+            <TransitionButton link="/event" text="新歓情報" />
+          </div>
         </div>
       </div>
       <div className={styles.about}>
@@ -89,16 +105,7 @@ const Home = () => {
         </div>
         <div className={styles.sliderContainer}>
           <div className={styles.slider}>
-            <Splide
-              options={{
-                autoplay: true,
-                interval: 3000,
-                rewind: true,
-                pagination: false,
-                pauseOnHover: true,
-                perPage: 3,
-                perMove: 1,
-              }}>
+            <Splide options={splideOptions}>
               {interviewThumbList.map((thumb, index) => (
                 <SplideSlide key={index} className={styles.slide}>
                   {/* TODO: ここをリンクに対応する */}
