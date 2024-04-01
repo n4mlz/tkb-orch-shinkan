@@ -1,0 +1,30 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0;
+    gap: 40px;
+
+    &>.pageTitle {
+        font-size: clamp(16px, 4.2vw, 32px);
+        font-weight: 700;
+    }
+
+    &>.logo {
+        width: 70%;
+        max-width: 500px;
+        height: auto;
+        display: block;
+    }
+
+    &>.description {
+        display: inline;
+        font-size: clamp(16px, 3vw, 24px);
+        text-align: center;
+    }
+
+    p {
+        color: #3a3a3a;
+    }
+}
