@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";
 import { ja } from "date-fns/locale";
@@ -10,6 +9,7 @@ import Header from "@components/Header/Header";
 import styles from "./page.module.scss";
 import { interviewThumbList } from "@/utils/imageList";
 import heroImage from "@images/hero.jpg";
+import Img from "@/components/Img";
 
 const TransitionButton = (props: { link: string; text: string }) => {
   return (
@@ -22,6 +22,20 @@ const TransitionButton = (props: { link: string; text: string }) => {
 };
 
 const Home = () => {
+  const splideOptions = {
+    autoplay: true,
+    interval: 3000,
+    rewind: true,
+    pagination: false,
+    pauseOnHover: true,
+    perPage: 3,
+    perMove: 1,
+    breakpoints: {
+      768: { perPage: 1 },
+      1280: { perPage: 3 },
+    },
+  };
+
   type welcomeEvent = {
     date: Date;
     name: string;
@@ -37,26 +51,31 @@ const Home = () => {
 
   return (
     <div className={styles.pageContainer}>
-      <Header />
-      <Image className={styles.heroImage} src={heroImage} alt="トップ画像" />
-      <div className={styles.welcomeEvent}>
-        <div className={styles.eventList}>
-          <p className={styles.sectionTitle}>直近の新歓イベント</p>
-          <table className={styles.eventListContent}>
-            <tbody>
-              {eventList.map((welcomeEvent, index) => (
-                <tr key={index}>
-                  <td>{getFormattedDate(welcomeEvent.date)}</td>
-                  <td>{welcomeEvent.name}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className={styles.welcomeEventButtonWrapper}>
-          <TransitionButton link="/event" text="新歓情報" />
+      <Header isHome={true} />
+
+      <Img className={styles.heroImage} src={heroImage} alt="トップ画像" />
+
+      <div className={styles.welcomeEventWrapper}>
+        <div className={styles.welcomeEvent}>
+          <div className={styles.eventList}>
+            <p className={styles.sectionTitle}>直近の新歓イベント</p>
+            <table className={styles.eventListContent}>
+              <tbody>
+                {eventList.map((welcomeEvent, index) => (
+                  <tr key={index}>
+                    <td>{getFormattedDate(welcomeEvent.date)}</td>
+                    <td>{welcomeEvent.name}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className={styles.welcomeEventButtonWrapper}>
+            <TransitionButton link="/event" text="新歓情報" />
+          </div>
         </div>
       </div>
+
       <div className={styles.about}>
         <p className={styles.sectionTitleWhite}>つくオケとは</p>
         <p className={styles.aboutContent}>
@@ -70,6 +89,7 @@ const Home = () => {
         </p>
         <TransitionButton link="/about" text="団体について" />
       </div>
+
       <div className={styles.introduction}>
         <div className={styles.sectionIntroduction}>
           <p className={styles.sectionTitleWhite}>セクション紹介</p>
@@ -80,6 +100,20 @@ const Home = () => {
           <TransitionButton link="/introduction" text="詳細を見る" />
         </div>
       </div>
+
+      <div className={styles.activity}>
+        <div className={styles.forPc}>
+          <TransitionButton link="/activity" text="詳細を見る" />
+        </div>
+        <div className={styles.activitySummary}>
+          <div className={styles.sectionTitleWhite}>1年間の活動の流れ</div>
+          <div className={styles.activityDescription}>つくオケの一年間の活動スケジュールを紹介しています。</div>
+        </div>
+        <div className={styles.forMobile}>
+          <TransitionButton link="/activity" text="詳細を見る" />
+        </div>
+      </div>
+
       <div className={styles.interview}>
         <div className={styles.interviewSummary}>
           <div className={styles.sectionTitle}>団員インタビュー</div>
@@ -89,18 +123,11 @@ const Home = () => {
         </div>
         <div className={styles.sliderContainer}>
           <div className={styles.slider}>
-            <Splide
-              options={{
-                autoplay: true,
-                interval: 3000,
-                rewind: true,
-                perPage: 3,
-                perMove: 1,
-              }}>
+            <Splide options={splideOptions}>
               {interviewThumbList.map((thumb, index) => (
-                <SplideSlide key={index}>
+                <SplideSlide key={index} className={styles.slide}>
                   {/* TODO: ここをリンクに対応する */}
-                  <Image className={styles.interviewThumb} src={thumb} alt="団員インタビューのサムネイル" />
+                  <Img className={styles.interviewThumb} src={thumb} alt="団員インタビューのサムネイル" />
                 </SplideSlide>
               ))}
             </Splide>
@@ -108,6 +135,7 @@ const Home = () => {
         </div>
         <TransitionButton link="/interview" text="インタビュー一覧" />
       </div>
+
       <div className={styles.moreInfo}>
         <div className={styles.moreInfoBlock}>
           <div className={styles.moreInfoSummary}>
@@ -126,6 +154,7 @@ const Home = () => {
           <TransitionButton link="/joinus" text="詳細を見る" />
         </div>
       </div>
+
       <div className={styles.contact}>
         <p className={styles.sectionTitle}>お問い合わせ</p>
         <table>

@@ -1,6 +1,7 @@
 @use "/src/styles/colorPalette.scss";
 
-.container {
+.container,
+.homeContainer {
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -9,8 +10,18 @@
     z-index: 80;
     width: 100vw;
     height: 80px;
-    padding: 0 24px;
-    background-color: colorPalette.$white;
+    padding: 0 50px;
+    background: colorPalette.$white;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0);
+    }
 
     &>.titleLogo {
         width: auto;
@@ -90,7 +101,7 @@
             display: flex;
             align-items: center;
             color: colorPalette.$white;
-            height: 100px;
+            height: 90px;
 
             &>p {
                 font-size: 32px;
@@ -115,6 +126,212 @@
                     font-weight: 500;
                     color: colorPalette.$white;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .container,
+    .homeContainer {
+        height: 60px;
+        padding: 0 20px;
+
+        &>p {
+            font-size: 24px;
+        }
+
+        &>.titleLogo {
+            width: auto;
+            height: 42px;
+        }
+
+        &>.hamburger {
+            height: 36px;
+            width: 36px;
+
+            &>span,
+            span::before,
+            span::after {
+                height: 3px;
+                width: 36px;
+            }
+
+            &>span::before {
+                bottom: 12px;
+            }
+
+            &>span::after {
+                top: 12px;
+            }
+        }
+
+        &>.menu {
+            width: 100vw;
+
+            &>.menuTitle {
+                height: 60px;
+            }
+
+            &>ul {
+                &>li {
+                    height: 24px;
+                    margin: 24px 0;
+                    padding-left: 12px;
+                    border-left: solid 3px colorPalette.$white;
+
+                    &>a {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        &>.drawerInput {
+            &:checked {
+                ~.menu {
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.homeContainer {
+    animation: container linear;
+    animation-timeline: scroll(root y);
+    animation-range: contain 0% contain 10%;
+
+    @keyframes container {
+        0% {
+            height: 160px;
+            background: rgba(255, 255, 255, 0);
+        }
+
+        100% {
+            height: 80px;
+            background: rgba(255, 255, 255, 1);
+        }
+    }
+
+    &::before {
+        animation: containerBefore linear;
+        animation-timeline: scroll(root y);
+        animation-range: contain 0% contain 5%;
+
+        @keyframes containerBefore {
+            0% {
+                background: linear-gradient(180deg, #0A0909 0%, rgba(12, 8, 7, 0.69) 57%, rgba(12, 8, 7, 0.64) 76.5%, rgba(16, 7, 4, 0.00) 100%);
+                opacity: 1;
+            }
+
+            100% {
+                background: linear-gradient(180deg, #0A0909 0%, rgba(12, 8, 7, 0.69) 57%, rgba(12, 8, 7, 0.64) 76.5%, rgba(16, 7, 4, 0.00) 100%);
+                opacity: 0;
+            }
+        }
+    }
+
+    &>.titleLogo {
+        animation: titleLogo linear;
+        animation-timeline: scroll(root y);
+        animation-range: contain 0% contain 10%;
+
+        @keyframes titleLogo {
+            0% {
+                height: 112px;
+                filter: invert(100%);
+            }
+
+            100% {
+                height: 56px;
+                filter: invert(0%);
+            }
+        }
+    }
+
+    &>.hamburger {
+        animation: hamburger linear;
+        animation-timeline: scroll(root y);
+        animation-range: contain 0% contain 10%;
+
+        @keyframes hamburger {
+            0% {
+                height: 96px;
+                width: 96px;
+            }
+
+            100% {
+                height: 48px;
+                width: 48px;
+            }
+        }
+    }
+
+    &>.menu {
+        &>.menuTitle {
+            animation: menuTitle linear;
+            animation-timeline: scroll(root y);
+            animation-range: contain 0% contain 10%;
+
+            @keyframes menuTitle {
+                0% {
+                    height: 160px;
+                }
+
+                100% {
+                    height: 90px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        @keyframes container {
+            0% {
+                height: 120px;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0);
+            }
+
+            100% {
+                height: 60px;
+                background: rgba(255, 255, 255, 1);
+            }
+        }
+
+        @keyframes titleLogo {
+            0% {
+                height: 84px;
+                filter: invert(100%);
+            }
+
+            100% {
+                height: 42px;
+                filter: invert(0%);
+            }
+        }
+
+        @keyframes hamburger {
+            0% {
+                height: 72px;
+                width: 72px;
+            }
+
+            100% {
+                height: 36px;
+                width: 36px;
+            }
+        }
+
+        @keyframes menuTitle {
+            0% {
+                height: 120px;
+            }
+
+            100% {
+                height: 90px;
             }
         }
     }

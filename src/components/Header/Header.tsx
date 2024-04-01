@@ -3,9 +3,13 @@ import titleLogo from "@images/title.png";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header = () => {
+type Props = {
+  isHome: boolean;
+};
+
+const Header = (props: Props) => {
   return (
-    <header className={styles.container}>
+    <header className={props.isHome ? styles.homeContainer : styles.container}>
       <Image className={styles.titleLogo} src={titleLogo} alt="title logo" />
       <input id="drawerInput" className={styles.drawerInput} type="checkbox"></input>
       <label className={styles.hamburger} htmlFor="drawerInput">
@@ -33,6 +37,9 @@ const Header = () => {
           </li>
           <li>
             <Link href="/faq">Q&A</Link>
+          </li>
+          <li>
+            <Link href="/joinus">入団方法</Link>
           </li>
           <li>
             <Link href="/contact">お問い合わせ</Link>
