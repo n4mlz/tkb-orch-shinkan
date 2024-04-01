@@ -51,7 +51,7 @@ const Home = () => {
 
   return (
     <div className={styles.pageContainer}>
-      <Header />
+      <Header isHome={true} />
 
       <Img className={styles.heroImage} src={heroImage} alt="トップ画像" />
 

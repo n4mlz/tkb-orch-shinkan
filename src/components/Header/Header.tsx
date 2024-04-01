@@ -3,9 +3,13 @@ import titleLogo from "@images/title.png";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header = () => {
+type Props = {
+  isHome: boolean;
+};
+
+const Header = (props: Props) => {
   return (
-    <header className={styles.container}>
+    <header className={props.isHome ? styles.homeContainer : styles.container}>
       <Image className={styles.titleLogo} src={titleLogo} alt="title logo" />
       <input id="drawerInput" className={styles.drawerInput} type="checkbox"></input>
       <label className={styles.hamburger} htmlFor="drawerInput">
