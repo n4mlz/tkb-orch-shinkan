@@ -7,7 +7,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/css";
 import Header from "@components/Header/Header";
 import styles from "@app/page.module.scss";
-import { interviewThumbList } from "@/utils/imageList";
+import { interviewThumbList } from "@/utils/images";
 import heroImage from "@images/hero.jpg";
 import Img from "@/components/Img";
 
