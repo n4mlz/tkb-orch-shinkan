@@ -1,7 +1,8 @@
-import styles from "@components/Header/Header.module.scss";
-import titleLogo from "@images/title.png";
 import Image from "next/image";
 import Link from "next/link";
+import Img from "@components/Img";
+import styles from "@components/Header/Header.module.scss";
+import titleLogo from "@images/title.png";
 
 type Props = {
   isHome: boolean;
@@ -10,7 +11,9 @@ type Props = {
 const Header = (props: Props) => {
   return (
     <header className={props.isHome ? styles.homeContainer : styles.container}>
-      <Image className={styles.titleLogo} src={titleLogo} alt="title logo" />
+      <Link href="/">
+        <Img className={styles.titleLogo} src={titleLogo} alt="title logo" />
+      </Link>
       <input id="drawerInput" className={styles.drawerInput} type="checkbox"></input>
       <label className={styles.hamburger} htmlFor="drawerInput">
         <span />
