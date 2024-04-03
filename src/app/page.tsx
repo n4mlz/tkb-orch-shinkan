@@ -58,7 +58,7 @@ const Home = () => {
   ];
 
   const eventListPreview = eventList
-    .filter((welcomeEvent: WelcomeEvent) => welcomeEvent.date >= new Date())
+    .filter((welcomeEvent: WelcomeEvent) => welcomeEvent.date.getDate() >= new Date().getDate())
     .slice(0, 3);
 
   const getFormattedDate = (date: Date) => format(date, "M/d(E)", { locale: ja });
