@@ -2,13 +2,34 @@
 
 body {
     font-family: var(--font-inter), var(--font-noto-sans-jp);
+    background: colorPalette.$grayWhite;
 }
 
 p {
     color: colorPalette.$black;
 }
 
+h1 {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
 a {
     text-decoration: none;
     color: colorPalette.$black;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
 }

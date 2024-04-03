@@ -58,7 +58,7 @@ const Home = () => {
       <div className={styles.welcomeEventWrapper}>
         <div className={styles.welcomeEvent}>
           <div className={styles.eventList}>
-            <p className={styles.sectionTitle}>直近の新歓イベント</p>
+            <h2>直近の新歓イベント</h2>
             <table className={styles.eventListContent}>
               <tbody>
                 {eventList.map((welcomeEvent, index) => (
@@ -77,7 +77,7 @@ const Home = () => {
       </div>
 
       <div className={styles.about}>
-        <p className={styles.sectionTitleWhite}>つくオケとは</p>
+        <h2 className={styles.aboutTitle}>つくオケとは</h2>
         <p className={styles.aboutContent}>
           筑波大学管弦楽団は1974年に創団された、
           <br />
@@ -92,11 +92,11 @@ const Home = () => {
 
       <div className={styles.introduction}>
         <div className={styles.sectionIntroduction}>
-          <p className={styles.sectionTitleWhite}>セクション紹介</p>
+          <h2 className={styles.introductionTitle}>セクション紹介</h2>
           <TransitionButton link="/introduction" text="詳細を見る" />
         </div>
         <div className={styles.partIntroduction}>
-          <p className={styles.sectionTitleWhite}>パート紹介</p>
+          <h2 className={styles.introductionTitle}>パート紹介</h2>
           <TransitionButton link="/introduction" text="詳細を見る" />
         </div>
       </div>
@@ -106,7 +106,7 @@ const Home = () => {
           <TransitionButton link="/activity" text="詳細を見る" />
         </div>
         <div className={styles.activitySummary}>
-          <div className={styles.sectionTitleWhite}>1年間の活動の流れ</div>
+          <h2 className={styles.activityTitle}>1年間の活動の流れ</h2>
           <div className={styles.activityDescription}>つくオケの一年間の活動スケジュールを紹介しています。</div>
         </div>
         <div className={styles.forMobile}>
@@ -116,7 +116,7 @@ const Home = () => {
 
       <div className={styles.interview}>
         <div className={styles.interviewSummary}>
-          <div className={styles.sectionTitle}>団員インタビュー</div>
+          <h2>団員インタビュー</h2>
           <div className={styles.interviewDescription}>
             大学から新しく楽器を始めた人や、医学類の人、複数のサークルに所属している人など、様々な境遇の団員にインタビューをしました。
           </div>
@@ -139,7 +139,7 @@ const Home = () => {
       <div className={styles.moreInfo}>
         <div className={styles.moreInfoBlock}>
           <div className={styles.moreInfoSummary}>
-            <p className={styles.sectionTitle}>Q&A</p>
+            <h2>Q&A</h2>
             <p className={styles.moreInfoDescription}>
               新入生が疑問に思いそうなことについてQ&A形式で一覧にしています。SNSで来た質問も随時こちらに掲載します。
             </p>
@@ -148,7 +148,7 @@ const Home = () => {
         </div>
         <div className={styles.moreInfoBlock}>
           <div className={styles.moreInfoSummary}>
-            <p className={styles.sectionTitle}>入団方法</p>
+            <h2>入団方法</h2>
             <p className={styles.moreInfoDescription}>入団方法はこちらからご覧になれます。</p>
           </div>
           <TransitionButton link="/joinus" text="詳細を見る" />
@@ -156,7 +156,7 @@ const Home = () => {
       </div>
 
       <div className={styles.contact}>
-        <p className={styles.sectionTitle}>お問い合わせ</p>
+        <h2>お問い合わせ</h2>
         <table>
           <tbody>
             <tr>

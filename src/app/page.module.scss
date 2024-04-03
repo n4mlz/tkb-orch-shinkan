@@ -24,7 +24,7 @@
             justify-content: center;
             align-items: center;
             max-width: 1280px;
-            padding: 60px 75px 75px 75px;
+            padding: 75px 75px 100px 75px;
             border-radius: 12px;
             background: colorPalette.$gray;
 
@@ -67,6 +67,10 @@
             linear-gradient(rgba(74, 22, 22, 0.3), rgba(74, 22, 22, 0.3)),
             url("/images/about.jpg") center top / cover;
 
+        &>.aboutTitle {
+            color: colorPalette.$white;
+        }
+
         &>.aboutContent {
             width: 75%;
             max-width: 700px;
@@ -86,21 +90,7 @@
         gap: 100px;
         padding: 70px;
 
-        &>.sectionIntroduction {
-            width: 45%;
-            max-width: 540px;
-            aspect-ratio: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 60px;
-            padding-top: 100px;
-            background:
-                linear-gradient(rgba(74, 22, 22, 0.3), rgba(74, 22, 22, 0.3)),
-                url("/images/section.png") center top / cover;
-        }
-
+        &>.sectionIntroduction,
         &>.partIntroduction {
             width: 45%;
             max-width: 540px;
@@ -111,6 +101,19 @@
             align-items: center;
             gap: 60px;
             padding-top: 100px;
+
+            &>.introductionTitle {
+                color: colorPalette.$white;
+            }
+        }
+
+        &>.sectionIntroduction {
+            background:
+                linear-gradient(rgba(74, 22, 22, 0.3), rgba(74, 22, 22, 0.3)),
+                url("/images/section.png") center top / cover;
+        }
+
+        &>.partIntroduction {
             background:
                 linear-gradient(rgba(74, 22, 22, 0.3), rgba(74, 22, 22, 0.3)),
                 url("/images/part.png") center top / cover;
@@ -123,7 +126,7 @@
         justify-content: center;
         align-items: center;
         gap: 250px;
-        padding: 200px 50px;
+        padding: 230px 50px;
         background:
             linear-gradient(rgba(143, 56, 51, 0.3), rgba(143, 56, 51, 0.3)),
             url("/images/activity.jpg") center top / cover;
@@ -138,6 +141,10 @@
             justify-content: center;
             align-items: center;
             gap: 70px;
+
+            &>.activityTitle {
+                color: colorPalette.$white;
+            }
 
             &>.activityDescription {
                 color: colorPalette.$white;
@@ -154,7 +161,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 40px;
+        gap: 80px;
         padding-top: 75px;
 
         &>.interviewSummary {
@@ -244,17 +251,6 @@
             padding: 8px;
         }
     }
-}
-
-.sectionTitle {
-    font-size: 32px;
-    font-weight: 500;
-}
-
-.sectionTitleWhite {
-    color: colorPalette.$white;
-    font-size: 32px;
-    font-weight: 500;
 }
 
 .transitionButton {
@@ -392,14 +388,6 @@
             padding: 30px;
             font-size: 12px;
         }
-    }
-
-    .sectionTitle {
-        font-size: 20px;
-    }
-
-    .sectionTitleWhite {
-        font-size: 20px;
     }
 
     .transitionButton {
