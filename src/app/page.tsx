@@ -6,7 +6,7 @@ import { ja } from "date-fns/locale";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/css";
 import Header from "@components/Header/Header";
-import styles from "./page.module.scss";
+import styles from "@app/page.module.scss";
 import { interviewThumbList } from "@/utils/imageList";
 import heroImage from "@images/hero.jpg";
 import Img from "@/components/Img";

@@ -1,0 +1,178 @@
+@use "/src/styles/colorPalette.scss";
+
+.pageContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    padding: 140px 10% 60px 10%;
+
+    &>.pageTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &>.profile {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        &>.profileContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 15%;
+        }
+    }
+
+    &>.overview {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+
+        &>.overviewTable {
+            tr {
+                th {
+                    width: 150px;
+                    padding: 10px;
+                    font-size: 24px;
+                    font-weight: 500;
+                    text-align: start;
+                }
+
+                td {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &>.schedule {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+
+        &>.scheduleTable {
+            position: relative;
+            border-collapse: separate;
+            border-spacing: 2px;
+
+            tr {
+                &:nth-child(1) {
+                    th {
+                        height: 70px;
+
+                        &:nth-child(1) {
+                            opacity: 0;
+                        }
+
+                        &:nth-child(2) {
+                            border-radius: 10px 0 0 0;
+                            background: colorPalette.$whiteRed;
+                        }
+
+                        &:nth-child(3) {
+                            background: colorPalette.$whiteGreen;
+                        }
+
+                        &:nth-child(4) {
+                            border-radius: 0 10px 0 0;
+                            background: colorPalette.$whiteBlue;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    th {
+                        border-radius: 10px 0 0 0;
+                        background: colorPalette.$whiteYellow;
+                    }
+                }
+
+                &:nth-child(3) {
+                    th {
+                        border-radius: 0 0 0 10px;
+                        background: colorPalette.$whiteYellow;
+                    }
+
+                    td {
+                        &:nth-child(4) {
+                            border-radius: 0 0 10px 0;
+                        }
+                    }
+                }
+
+                th,
+                td {
+                    background: colorPalette.$whiteGray;
+                    width: 25%;
+                    text-align: center;
+                }
+
+                th {
+                    height: 100px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &>ul {
+            &>li {
+                padding: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pageContainer {
+        gap: 50px;
+        padding: 100px 30px 60px 30px;
+
+        &>.profile {
+            gap: 10px;
+
+            &>.profileContent {
+                padding: 0 10px;
+                font-size: 12px;
+                line-height: 24px;
+            }
+        }
+
+        &>.overview {
+            gap: 25px;
+
+            &>.overviewTable {
+                tr {
+                    th {
+                        width: 100px;
+                        font-size: 16px;
+                    }
+
+                    td {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        &>.schedule {
+            gap: 20px;
+
+            &>.scheduleTable {
+                font-size: 11px;
+            }
+
+            &>ul {
+                font-size: 12px;
+            }
+        }
+    }
+}
