@@ -3,8 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 120px 0;
     gap: 40px;
+    height: 100vh;
+    padding: 120px 0;
+    background: #ffffff;
 
     &>.pageTitle {
         font-size: clamp(16px, 4.2vw, 32px);
