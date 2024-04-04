@@ -17,7 +17,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 60px;
+            padding: 60px 0;
         }
 
         &>.introduction {
@@ -110,6 +110,58 @@
                             height: auto;
                             aspect-ratio: 1.3;
                             object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pageContainer {
+
+        &>.pageContent {
+            padding: 60px 20px 120px 20px;
+
+            &>.pageTitle {
+                gap: 10px;
+                padding: 30px 0;
+            }
+
+            &>.introduction {
+
+                &>.introductionBlock {
+
+                    &>.blockTitle {
+                        gap: 30px;
+                        padding: 0;
+                    }
+
+                    &>.sectionList {
+
+                        &>.section {
+                            grid-template-columns: auto;
+                            grid-template-rows: 1fr min(50%, 500px);
+                            gap: 20px;
+
+                            &>.sectionContent {
+                                padding-bottom: 0;
+                            }
+
+                            &>.sectionImage {
+                                grid-column: 1 / 2;
+                                grid-row: 2 / 3;
+                            }
+                        }
+                    }
+
+                    &>.partList {
+                        gap: 60px;
+
+                        &>.part {
+                            gap: 20px;
+                            width: 100%;
                         }
                     }
                 }
