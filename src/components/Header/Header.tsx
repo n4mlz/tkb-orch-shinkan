@@ -45,7 +45,7 @@ const Header = (props: Props) => {
             <Link href="/joinus">入団方法</Link>
           </li>
           <li>
-            <Link href="/contact">お問い合わせ</Link>
+            <Link href="/#contact">お問い合わせ</Link>
           </li>
         </ul>
       </nav>
