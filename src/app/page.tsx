@@ -130,7 +130,7 @@ const Home = () => {
 
       <div className={styles.interview}>
         <div className={styles.interviewSummary}>
-          <h2>団員インタビュー</h2>
+          <h2>先輩インタビュー</h2>
           <div className={styles.interviewDescription}>
             大学から新しく楽器を始めた人や、医学類の人、複数のサークルに所属している人など、様々な境遇の団員にインタビューをしました。
           </div>

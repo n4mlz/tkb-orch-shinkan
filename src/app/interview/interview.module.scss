@@ -1,0 +1,112 @@
+@use "/src/styles/colorPalette.scss";
+
+.pageContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+
+    &>.pageTitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 0;
+    }
+
+    &>.interview {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        width: 100%;
+        max-width: 1400px;
+        padding: 40px 80px;
+
+        &>.interviewBlock {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 30px;
+            width: 100%;
+            background: colorPalette.$whitePink;
+            padding: 32px 48px 48px 48px;
+            border: 1px solid colorPalette.$brownGray;
+            border-radius: 32px;
+
+            &>.interviewee {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+
+                &>.intervieweeIcon {
+                    width: 100px;
+                    height: 100px;
+                    border: 1px solid colorPalette.$brownGray;
+                    border-radius: 50px;
+                }
+
+                &>.interviewTitle {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                }
+            }
+
+            &>.interviewContent {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 20px;
+
+                &>.qa {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pageContainer {
+        padding: 60px 0;
+
+        &>.pageTitle {
+            padding: 40px 0;
+        }
+
+        &>.interview {
+            padding: 20px;
+
+            &>.interviewBlock {
+                gap: 20px;
+                padding: 20px 25px 25px 25px;
+
+                &>.interviewee {
+                    &>.intervieweeIcon {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 30px;
+                    }
+                }
+
+                &>.interviewContent {
+                    gap: 15px;
+                }
+            }
+        }
+    }
+}
