@@ -107,11 +107,11 @@ const Home = () => {
       <div className={styles.introduction}>
         <div className={styles.sectionIntroduction}>
           <h2 className={styles.introductionTitle}>セクション紹介</h2>
-          <TransitionButton link="/introduction" text="詳細を見る" />
+          <TransitionButton link="/introduction#section" text="詳細を見る" />
         </div>
         <div className={styles.partIntroduction}>
           <h2 className={styles.introductionTitle}>パート紹介</h2>
-          <TransitionButton link="/introduction" text="詳細を見る" />
+          <TransitionButton link="/introduction#part" text="詳細を見る" />
         </div>
       </div>
 
@@ -169,7 +169,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={styles.contact}>
+      <div className={styles.contact} id="contact">
         <h2>お問い合わせ</h2>
         <table>
           <tbody>

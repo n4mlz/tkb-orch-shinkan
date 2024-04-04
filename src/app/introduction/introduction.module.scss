@@ -1,5 +1,119 @@
 @use "/src/styles/colorPalette.scss";
 
 .pageContainer {
-    padding: 80px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &>.pageContent {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 80px 60px 240px 60px;
+        max-width: 1300px;
+
+        &>.pageTitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+        }
+
+        &>.introduction {
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+
+            &>.introductionBlock {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 60px;
+
+                &>.blockTitle {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 60px;
+                    padding: 60px 0;
+
+                    &>.blockDescription {
+                        width: 80%;
+                    }
+                }
+
+                &>.sectionList {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 100px;
+
+                    &>.section {
+                        display: grid;
+                        grid-template-columns: 1fr min(50%, 500px);
+                        grid-template-rows: auto;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 40px;
+
+                        &>.sectionContent {
+                            grid-column: 1 / 2;
+                            grid-row: 1 / 2;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 20px;
+                            padding-bottom: 75px;
+
+                            &>.sectionTitle {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 10px;
+                            }
+                        }
+
+                        &>.sectionImage {
+                            grid-column: 2 / 3;
+                            grid-row: 1 / 2;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                &>.partList {
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: start;
+                    gap: 100px;
+
+                    &>.part {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 30px;
+                        width: 40%;
+
+                        &>.partImage {
+                            width: 100%;
+                            height: auto;
+                            aspect-ratio: 1.3;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
