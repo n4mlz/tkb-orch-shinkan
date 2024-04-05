@@ -20,6 +20,9 @@ import icon7 from "@images/interview/icon7.png";
 import icon8 from "@images/interview/icon8.png";
 import icon9 from "@images/interview/icon9.png";
 
+import faq0 from "@images/faq/faq0.png";
+import faq1 from "@images/faq/faq1.png";
+
 import strings from "@images/section/strings.png";
 import woodwinds from "@images/section/woodwinds.png";
 import brass from "@images/section/brass.png";
@@ -40,6 +43,8 @@ import percussion from "@images/part/percussion.png";
 const interviewThumbList = [thumb0, thumb1, thumb2, thumb3, thumb4, thumb5, thumb6, thumb7, thumb8, thumb9];
 
 const interviewIconList = [icon0, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9];
+
+const faqImageList = [faq0, faq1];
 
 const sectionImages = {
   strings,
@@ -62,4 +67,4 @@ const partImages = {
   percussion,
 };
 
-export { interviewThumbList, interviewIconList, sectionImages, partImages };
+export { interviewThumbList, interviewIconList, faqImageList, sectionImages, partImages };
