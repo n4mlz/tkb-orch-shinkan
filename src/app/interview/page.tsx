@@ -1,8 +1,13 @@
+import { Metadata } from "next";
 import { StaticImageData } from "next/image";
 import Img from "@/components/Img";
 import { interviewIconList } from "@/utils/images";
 import Header from "@/components/Header/Header";
 import styles from "@app/interview/interview.module.scss";
+
+export const metadata: Metadata = {
+  title: "先輩インタビュー",
+};
 
 const Interview = () => {
   type Qa = {
