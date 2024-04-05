@@ -1,8 +1,13 @@
+import { Metadata } from "next";
 import { StaticImageData } from "next/image";
 import Img from "@/components/Img";
 import Header from "@/components/Header/Header";
 import styles from "@app/introduction/introduction.module.scss";
 import { sectionImages, partImages } from "@/utils/images";
+
+export const metadata: Metadata = {
+  title: "セクション・パート紹介",
+};
 
 const Introduction = () => {
   type Section = {

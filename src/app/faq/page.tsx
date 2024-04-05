@@ -1,8 +1,13 @@
+import { Metadata } from "next";
 import { StaticImageData } from "next/image";
 import Img from "@/components/Img";
 import Header from "@/components/Header/Header";
 import styles from "@app/faq/faq.module.scss";
 import { faqImageList } from "@/utils/images";
+
+export const metadata: Metadata = {
+  title: "Q&A",
+};
 
 const Faq = () => {
   type Qa = {
@@ -43,7 +48,7 @@ const Faq = () => {
       <Header isHome={false} />
       <div className={styles.pageContainer}>
         <div className={styles.pageTitle}>
-          <h1>先輩インタビュー</h1>
+          <h1>Q&A</h1>
         </div>
         <div className={styles.qas}>
           {qas.map((qa, index) => (

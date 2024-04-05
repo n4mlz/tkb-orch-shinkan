@@ -1,5 +1,10 @@
+import { Metadata } from "next";
 import Header from "@/components/Header/Header";
 import styles from "@app/about/about.module.scss";
+
+export const metadata: Metadata = {
+  title: "基本情報",
+};
 
 const About = () => {
   return (
