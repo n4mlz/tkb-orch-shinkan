@@ -49,7 +49,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    z-index: 100;
+                    z-index: 20;
                     border: 8px solid colorPalette.$whiteRed;
                     border-radius: 50px;
                     width: 100px;
@@ -65,7 +65,7 @@
                 align-items: center;
 
                 &>.activityImage {
-                    z-index: 150;
+                    z-index: 30;
                     padding: 60px;
                     width: 750px;
                     height: auto;
@@ -76,11 +76,11 @@
             &::after {
                 content: '';
                 position: absolute;
-                z-index: 50;
+                z-index: 10;
                 top: 90px;
                 left: 88px;
                 width: 4px;
-                height: 100%;
+                height: 110%;
                 background: colorPalette.$brown;
             }
         }
@@ -88,6 +88,53 @@
         &>.activityLast {
             &::after {
                 display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pageContainer {
+        padding: 60px 0;
+
+        &>.activities {
+            gap: 20px;
+            padding: 0 20px;
+
+            &>.activity,
+            &>.activityLast {
+                padding: 20px 20px 20px 10px;
+                width: 100%;
+
+                &>.activitySummary {
+                    gap: 20px;
+
+                    &>.activityTitle {
+                        font-size: 18px;
+                    }
+
+                    &>.activityMonth {
+                        border: 8px solid colorPalette.$whiteRed;
+                        width: 60px;
+                        height: 60px;
+
+                        &>h2 {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                &>.activityImageWrapper {
+                    &>.activityImage {
+                        padding: 40px;
+                        width: 100%;
+                    }
+                }
+
+                &::after {
+                    top: 40px;
+                    left: 38px;
+                }
             }
         }
     }
