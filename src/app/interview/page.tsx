@@ -278,7 +278,7 @@ const Interview = () => {
         </div>
         <div className={styles.interview}>
           {interviewBlocks.map((interviewBlock, index) => (
-            <div className={styles.interviewBlock} key={index}>
+            <div className={styles.interviewBlock} id={interviewBlock.id} key={index}>
               <div className={styles.interviewee}>
                 <Img className={styles.intervieweeIcon} src={interviewBlock.image} alt={interviewBlock.alt} />
                 <div className={styles.interviewTitle}>
