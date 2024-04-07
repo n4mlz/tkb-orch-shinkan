@@ -23,6 +23,10 @@ import icon9 from "@images/interview/icon9.png";
 import faq0 from "@images/faq/faq0.png";
 import faq1 from "@images/faq/faq1.png";
 
+import welcomeFestival from "@images/event/welcomeFestival.png";
+import ensembleConcert from "@images/event/ensembleConcert.png";
+import novaHall from "@images/event/novaHall.png";
+
 import strings from "@images/section/strings.png";
 import woodwinds from "@images/section/woodwinds.png";
 import brass from "@images/section/brass.png";
@@ -46,6 +50,12 @@ const interviewIconList = [icon0, icon1, icon2, icon3, icon4, icon5, icon6, icon
 
 const faqImageList = [faq0, faq1];
 
+const eventImages = {
+  welcomeFestival,
+  ensembleConcert,
+  novaHall,
+};
+
 const sectionImages = {
   strings,
   woodwinds,
@@ -67,4 +77,4 @@ const partImages = {
   percussion,
 };
 
-export { interviewThumbList, interviewIconList, faqImageList, sectionImages, partImages };
+export { interviewThumbList, interviewIconList, faqImageList, eventImages, sectionImages, partImages };

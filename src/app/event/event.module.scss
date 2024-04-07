@@ -1,0 +1,13 @@
+@use "/src/styles/colorPalette.scss";
+
+.pageContainer {
+    padding: 80px 0;
+
+    &>.pageTitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 0;
+    }
+}
