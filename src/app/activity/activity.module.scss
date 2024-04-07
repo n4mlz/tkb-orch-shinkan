@@ -1,0 +1,94 @@
+@use "/src/styles/colorPalette.scss";
+
+.pageContainer {
+    position: relative;
+    padding: 80px 0;
+
+    &>.pageTitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 0;
+        width: 100%;
+    }
+
+    &>.activities {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        padding: 0 60px;
+
+        &>.activity,
+        &>.activityLast {
+            position: relative;
+            border-radius: 12px;
+            padding: 30px 40px;
+            background: colorPalette.$gray;
+            width: 90%;
+            max-width: 1300px;
+
+            &>.activitySummary {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                gap: 40px;
+
+                &>.activityTitle {
+                    flex: 1;
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: colorPalette.$black;
+                }
+
+                &>.activityMonth {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 100;
+                    border: 8px solid colorPalette.$whiteRed;
+                    border-radius: 50px;
+                    width: 100px;
+                    height: 100px;
+                    background: colorPalette.$white;
+                    box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.3);
+                }
+            }
+
+            &>.activityImageWrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &>.activityImage {
+                    z-index: 150;
+                    padding: 60px;
+                    width: 750px;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: 50;
+                top: 90px;
+                left: 88px;
+                width: 4px;
+                height: 100%;
+                background: colorPalette.$brown;
+            }
+        }
+
+        &>.activityLast {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
