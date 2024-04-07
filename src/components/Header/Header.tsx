@@ -39,7 +39,7 @@ const Header = (props: Props) => {
             <Link href="/event">新歓情報</Link>
           </li>
           <li>
-            <Link href="/activity">1年間の活動の流れ</Link>
+            <Link href="/activity">一年間の活動の流れ</Link>
           </li>
           <li>
             <Link href="/introduction">セクション・パート紹介</Link>
