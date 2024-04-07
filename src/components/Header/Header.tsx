@@ -42,7 +42,7 @@ const Header = (props: Props) => {
             <Link href="/faq">Q&A</Link>
           </li>
           <li>
-            <Link href="/joinus">入団方法</Link>
+            <Link href="/#joinus">入団方法</Link>
           </li>
           <li>
             <Link href="/#contact">お問い合わせ</Link>

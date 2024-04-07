@@ -238,6 +238,68 @@
         }
     }
 
+    &>.joinus {
+        position: relative;
+        padding: 0 30px;
+
+        &>.joinusTitle {
+            padding: 40px 20%;
+        }
+
+        &>.joinusSteps {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 45px;
+
+            &>.joinusStep,
+            &>.joinusStepLast {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                width: min(80vw, 1100px);
+                background: colorPalette.$whiteBeige;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                padding: 20px 20px 5px 20px;
+
+                &>.joinusStepNumber {
+                    font-size: 32px;
+                }
+
+                &>.joinusStepTitle {
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: colorPalette.$black;
+                }
+            }
+
+            &>.joinusStepLast {
+                margin-bottom: 0;
+                padding: 20px;
+            }
+
+            &>.joinusStep::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                bottom: max(-3.9vw, -54px);
+                left: 7.5px;
+                border-style: solid;
+                border-color: colorPalette.$whiteBeige transparent transparent transparent;
+                border-width: min(4vw, 55px) calc(min(40vw, 550px) - 7px) 0 calc(min(40vw, 550px) - 7px);
+                z-index: 1;
+            }
+        }
+    }
+
+
     &>.contact {
         display: flex;
         flex-direction: column;
@@ -380,6 +442,38 @@
                     &>.faqDescription {
                         font-size: 14px;
                     }
+                }
+            }
+        }
+
+        &>.joinus {
+            gap: 20px;
+
+            &>.joinusTitle {
+                padding: 20px 30px;
+            }
+
+            &>.joinusSteps {
+                gap: 20px;
+
+                &>.joinusStep,
+                &>.joinusStepLast {
+                    &>.joinusStepNumber {
+                        font-size: 16px;
+                    }
+
+                    &>.joinusStepTitle {
+                        font-size: 13px;
+                    }
+
+                    &>.joinusStepDescription {
+                        font-size: 11px;
+                    }
+                }
+
+                &>.joinusStep::after {
+                    bottom: max(-5.9vw, -82px);
+                    border-width: min(6vw, 82.5px) calc(min(40vw, 550px) - 7px) 0 calc(min(40vw, 550px) - 7px);
                 }
             }
         }
