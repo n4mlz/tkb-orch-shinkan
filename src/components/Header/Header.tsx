@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Img from "@components/Img";
 import styles from "@components/Header/Header.module.scss";
@@ -9,12 +11,19 @@ type Props = {
 };
 
 const Header = (props: Props) => {
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
     <header className={props.isHome ? styles.homeContainer : styles.container}>
       <Link href="/">
         <Img className={styles.titleLogo} src={titleLogo} alt="title logo" />
       </Link>
-      <input id="drawerInput" className={styles.drawerInput} type="checkbox"></input>
+      <input
+        id="drawerInput"
+        className={styles.drawerInput}
+        type="checkbox"
+        checked={isChecked}
+        onClick={() => setIsChecked(!isChecked)}></input>
       <label className={styles.hamburger} htmlFor="drawerInput">
         <span />
       </label>
@@ -42,10 +51,14 @@ const Header = (props: Props) => {
             <Link href="/faq">Q&A</Link>
           </li>
           <li>
-            <Link href="/#joinus">入団方法</Link>
+            <Link href="/#joinus" onClick={() => setIsChecked(false)}>
+              入団方法
+            </Link>
           </li>
           <li>
-            <Link href="/#contact">お問い合わせ</Link>
+            <Link href="/#contact" onClick={() => setIsChecked(false)}>
+              お問い合わせ
+            </Link>
           </li>
         </ul>
       </nav>
