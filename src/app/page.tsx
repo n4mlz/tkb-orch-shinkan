@@ -10,6 +10,7 @@ import styles from "@app/page.module.scss";
 import { interviewThumbList } from "@/utils/images";
 import heroImage from "@images/hero.jpg";
 import Img from "@/components/Img";
+import { eventList } from "@/consts";
 
 const TransitionButton = (props: { link: string; text: string }) => {
   return (
@@ -36,29 +37,8 @@ const Home = () => {
     },
   };
 
-  type WelcomeEvent = {
-    date: Date;
-    name: string;
-  };
-
-  const eventList: WelcomeEvent[] = [
-    { date: new Date(2024, 4 - 1, 5), name: "入学式一斉新歓" },
-    { date: new Date(2024, 4 - 1, 6), name: "新歓本祭" },
-    { date: new Date(2024, 4 - 1, 12), name: "食事会" },
-    { date: new Date(2024, 4 - 1, 16), name: "アンサンブルコンサート・オーケストラパーティー・入団説明会" },
-    { date: new Date(2024, 4 - 1, 17), name: "楽器体験" },
-    { date: new Date(2024, 4 - 1, 20), name: "オーケストラコンサート" },
-    { date: new Date(2024, 4 - 1, 23), name: "アンサンブルコンサート・オーケストラパーティー" },
-    { date: new Date(2024, 4 - 1, 24), name: "初心者座談会" },
-    { date: new Date(2024, 4 - 1, 25), name: "ノバホール公開練習" },
-    { date: new Date(2024, 4 - 1, 27), name: "全体会・入団説明会" },
-    { date: new Date(2024, 4 - 1, 28), name: "一次締切" },
-    { date: new Date(2024, 5 - 1, 7), name: "入団説明会" },
-    { date: new Date(2024, 5 - 1, 31), name: "新歓期間終了" },
-  ];
-
   const eventListPreview = eventList
-    .filter((welcomeEvent: WelcomeEvent) => welcomeEvent.date.getDate() >= new Date().getDate())
+    .filter((welcomeEvent) => welcomeEvent.date.getDate() >= new Date().getDate())
     .slice(0, 3);
 
   const getFormattedDate = (date: Date) => format(date, "M/d(E)", { locale: ja });
@@ -78,7 +58,7 @@ const Home = () => {
                 {eventListPreview.map((welcomeEvent, index) => (
                   <tr key={index}>
                     <td>{getFormattedDate(welcomeEvent.date)}</td>
-                    <td>{welcomeEvent.name}</td>
+                    <td>{welcomeEvent.events.join("・")}</td>
                   </tr>
                 ))}
               </tbody>

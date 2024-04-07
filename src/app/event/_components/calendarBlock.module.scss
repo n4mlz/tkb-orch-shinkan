@@ -1,0 +1,119 @@
+@use "/src/styles/colorPalette.scss";
+
+.calendarBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &>.calendarBlockTitle {
+        padding: 20px;
+        width: 100%;
+    }
+
+    &>.calendarWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        &>.month {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+            gap: 20px;
+            padding: 20px;
+
+            &>.selectedMonth {
+                border: 2px solid colorPalette.$whiteRed;
+                border-radius: 30px;
+                padding: 5px 20px;
+                font-size: 28px;
+                font-weight: 500;
+                color: colorPalette.$black;
+            }
+
+            &>.unselectedMonth {
+                border: 1.5px solid colorPalette.$whiteRed;
+                border-radius: 24px;
+                padding: 5px 15px;
+                font-size: 24px;
+                font-weight: 500;
+                color: colorPalette.$gray;
+            }
+        }
+
+        &>.calendar {
+            position: relative;
+            border: 1px solid colorPalette.$black;
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+            max-width: 1200px;
+
+            th {
+                background: colorPalette.$brownGray;
+                border: 1px solid colorPalette.$black;
+                padding: 10px;
+            }
+
+            td {
+                border: 1px solid colorPalette.$black;
+                vertical-align: top;
+            }
+
+            .calendarCell {
+                padding: 10px 5px;
+                height: auto;
+                aspect-ratio: 1.2;
+
+                li {
+                    list-style-position: inside;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .calendarBlock {
+        &>.calendarBlockTitle {
+            padding: 10px;
+        }
+
+        &>.calendarWrapper {
+            &>.month {
+                gap: 10px;
+                padding: 0 10px 10px 10px;
+
+                &>.selectedMonth {
+                    padding: 3px 12px;
+                    font-size: 16px;
+                }
+
+                &>.unselectedMonth {
+                    padding: 0px 6px;
+                    font-size: 14px;
+                }
+            }
+
+            &>.calendar {
+                font-size: 11px;
+
+                th {
+                    padding: 0px;
+                }
+
+                .calendarCell {
+                    padding: 5px 2px;
+                    font-size: 8px;
+                    aspect-ratio: 1;
+                }
+            }
+        }
+    }
+}
