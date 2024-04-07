@@ -77,3 +77,43 @@
         }
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .calendarBlock {
+        &>.calendarBlockTitle {
+            padding: 10px;
+        }
+
+        &>.calendarWrapper {
+            &>.month {
+                gap: 10px;
+                padding: 0 10px 10px 10px;
+
+                &>.selectedMonth {
+                    padding: 3px 12px;
+                    font-size: 16px;
+                }
+
+                &>.unselectedMonth {
+                    padding: 0px 6px;
+                    font-size: 14px;
+                }
+            }
+
+            &>.calendar {
+                font-size: 11px;
+
+                th {
+                    padding: 0px;
+                }
+
+                .calendarCell {
+                    padding: 5px 2px;
+                    font-size: 8px;
+                    aspect-ratio: 1;
+                }
+            }
+        }
+    }
+}
