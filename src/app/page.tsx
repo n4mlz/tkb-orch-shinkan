@@ -130,23 +130,15 @@ const Home = () => {
         </div>
         <TransitionButton link="/interview" text="インタビュー一覧" />
       </div>
-
-      <div className={styles.moreInfo}>
-        <div className={styles.moreInfoBlock}>
-          <div className={styles.moreInfoSummary}>
+      <div className={styles.faqWrapper}>
+        <div className={styles.faq}>
+          <div className={styles.faqSummary}>
             <h2>Q&A</h2>
-            <p className={styles.moreInfoDescription}>
+            <p className={styles.faqDescription}>
               新入生が疑問に思いそうなことについてQ&A形式で一覧にしています。SNSで来た質問も随時こちらに掲載します。
             </p>
           </div>
           <TransitionButton link="/faq" text="一覧を見る" />
-        </div>
-        <div className={styles.moreInfoBlock}>
-          <div className={styles.moreInfoSummary}>
-            <h2>入団方法</h2>
-            <p className={styles.moreInfoDescription}>入団方法はこちらからご覧になれます。</p>
-          </div>
-          <TransitionButton link="/joinus" text="詳細を見る" />
         </div>
       </div>
 
