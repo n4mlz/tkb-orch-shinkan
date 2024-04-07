@@ -20,7 +20,14 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     url: SITE_URL,
     siteName: SITE_NAME,
-    images: [{ url: "/images/ogp.png", alt: SITE_NAME }],
+    images: [
+      {
+        url: "/images/ogp.png",
+        width: 1200,
+        height: 630,
+        alt: SITE_NAME,
+      },
+    ],
   },
 };
 

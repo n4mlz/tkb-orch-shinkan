@@ -130,23 +130,40 @@ const Home = () => {
         </div>
         <TransitionButton link="/interview" text="インタビュー一覧" />
       </div>
-
-      <div className={styles.moreInfo}>
-        <div className={styles.moreInfoBlock}>
-          <div className={styles.moreInfoSummary}>
+      <div className={styles.faqWrapper}>
+        <div className={styles.faq}>
+          <div className={styles.faqSummary}>
             <h2>Q&A</h2>
-            <p className={styles.moreInfoDescription}>
+            <p className={styles.faqDescription}>
               新入生が疑問に思いそうなことについてQ&A形式で一覧にしています。SNSで来た質問も随時こちらに掲載します。
             </p>
           </div>
           <TransitionButton link="/faq" text="一覧を見る" />
         </div>
-        <div className={styles.moreInfoBlock}>
-          <div className={styles.moreInfoSummary}>
-            <h2>入団方法</h2>
-            <p className={styles.moreInfoDescription}>入団方法はこちらからご覧になれます。</p>
+      </div>
+
+      <div className={styles.joinus} id="joinus">
+        <div className={styles.joinusTitle}>
+          <h2>入団方法</h2>
+        </div>
+        <div className={styles.joinusSteps}>
+          <div className={styles.joinusStep}>
+            <p className={styles.joinusStepNumber}>STEP 1</p>
+            <p className={styles.joinusStepTitle}>筑波大学管弦楽団の新歓に行こう ! 管弦楽団の様々な情報をGET !</p>
+            <p className={styles.joinusStepDescription}>
+              筑波大学管弦楽団では、さまざまな新歓イベントを用意しています ! ぜひこ参加ください !
+            </p>
           </div>
-          <TransitionButton link="/joinus" text="詳細を見る" />
+          <div className={styles.joinusStep}>
+            <p className={styles.joinusStepNumber}>STEP 2</p>
+            <p className={styles.joinusStepTitle}>入団説明会で資料をGET ! 入団届に必要事項を記入しよう !</p>
+            <p className={styles.joinusStepDescription}>分からないことも優 しい先輩達が丁寧に教えてくれるので安心 !</p>
+          </div>
+          <div className={styles.joinusStepLast}>
+            <p className={styles.joinusStepNumber}>STEP 3</p>
+            <p className={styles.joinusStepTitle}>これであなたも筑波大学管弦楽団 ! !</p>
+            <p className={styles.joinusStepDescription}>ついに管弦楽団の一員になりました ! みんなで音楽を楽しもう !</p>
+          </div>
         </div>
       </div>
 
