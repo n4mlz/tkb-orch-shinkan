@@ -27,6 +27,14 @@ import welcomeFestival from "@images/event/welcomeFestival.png";
 import ensembleConcert from "@images/event/ensembleConcert.png";
 import novaHall from "@images/event/novaHall.png";
 
+import april from "@images/activity/april.png";
+import may from "@images/activity/may.png";
+import october from "@images/activity/october.png";
+import november from "@images/activity/november.png";
+import december from "@images/activity/december.png";
+import january from "@images/activity/january.png";
+import march from "@images/activity/march.png";
+
 import strings from "@images/section/strings.png";
 import woodwinds from "@images/section/woodwinds.png";
 import brass from "@images/section/brass.png";
@@ -56,6 +64,16 @@ const eventImages = {
   novaHall,
 };
 
+const activityImages = {
+  april,
+  may,
+  october,
+  november,
+  december,
+  january,
+  march,
+};
+
 const sectionImages = {
   strings,
   woodwinds,
@@ -77,4 +95,4 @@ const partImages = {
   percussion,
 };
 
-export { interviewThumbList, interviewIconList, faqImageList, eventImages, sectionImages, partImages };
+export { interviewThumbList, interviewIconList, faqImageList, eventImages, activityImages, sectionImages, partImages };
