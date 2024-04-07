@@ -103,22 +103,25 @@ const Event = () => {
         <div className={styles.pageTitle}>
           <h1>新歓イベント情報</h1>
         </div>
-        <CalenderBlock />
-        <h2>新歓イベント詳細</h2>
-        <div className={styles.welcomeEvents}>
-          {welcomeEvents.map((welcomeEvent, index) => (
-            <div key={index} className={styles.welcomeEvent}>
-              <div className={styles.welcomeEventContent}>
-                <h3>{welcomeEvent.name}</h3>
-                <p>{welcomeEvent.date}</p>
-                <p>{welcomeEvent.place}</p>
-                <p>{welcomeEvent.description}</p>
+        <div className={styles.pageContent}>
+          <CalenderBlock />
+          <h2 className={styles.welcomeEventsTitle}>新歓イベント詳細</h2>
+          <div className={styles.welcomeEvents}>
+            {welcomeEvents.map((welcomeEvent, index) => (
+              <div key={index} className={styles.welcomeEvent}>
+                <div className={styles.welcomeEventContent}>
+                  <h3>{welcomeEvent.name}</h3>
+                  <p className={styles.welcomeEventSummary}>
+                    {`日時 ${welcomeEvent.date} / 場所 ${welcomeEvent.place}`}
+                  </p>
+                  <p>{welcomeEvent.description}</p>
+                </div>
+                {welcomeEvent.image ? (
+                  <Img className={styles.welcomeEventImage} src={welcomeEvent.image} alt={welcomeEvent.name} />
+                ) : null}
               </div>
-              <div className={styles.welcomeEventImage}>
-                {welcomeEvent.image ? <Img src={welcomeEvent.image} alt={welcomeEvent.name} /> : null}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>
