@@ -120,8 +120,9 @@ const Home = () => {
             <Splide options={splideOptions}>
               {interviewThumbList.map((thumb, index) => (
                 <SplideSlide key={index} className={styles.slide}>
-                  {/* TODO: ここをリンクに対応する */}
-                  <Img className={styles.interviewThumb} src={thumb} alt="団員インタビューのサムネイル" />
+                  <Link href={`/interview/#${index}`}>
+                    <Img className={styles.interviewThumb} src={thumb} alt="団員インタビューのサムネイル" />
+                  </Link>
                 </SplideSlide>
               ))}
             </Splide>
