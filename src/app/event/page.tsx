@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { StaticImageData } from "next/image";
 import Img from "@/components/Img";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import CalenderBlock from "./_components/calendarBlock";
 import { eventImages } from "@/utils/images";
 import styles from "@app/event/event.module.scss";
@@ -124,6 +125,7 @@ const Event = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -3,6 +3,7 @@ import { StaticImageData } from "next/image";
 import Img from "@/components/Img";
 import { interviewIconList } from "@/utils/images";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import styles from "@app/interview/interview.module.scss";
 
 export const metadata: Metadata = {
@@ -298,6 +299,7 @@ const Interview = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

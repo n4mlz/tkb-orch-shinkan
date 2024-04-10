@@ -6,6 +6,7 @@ import { ja } from "date-fns/locale";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/css";
 import Header from "@components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import styles from "@app/page.module.scss";
 import { interviewThumbList } from "@/utils/images";
 import heroImage from "@images/hero.jpg";
@@ -182,6 +183,7 @@ const Home = () => {
           </tbody>
         </table>
       </div>
+      <Footer />
     </div>
   );
 };

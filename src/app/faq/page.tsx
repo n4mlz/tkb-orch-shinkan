@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { StaticImageData } from "next/image";
 import Img from "@/components/Img";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import styles from "@app/faq/faq.module.scss";
 import { faqImageList } from "@/utils/images";
 
@@ -75,6 +76,7 @@ const Faq = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

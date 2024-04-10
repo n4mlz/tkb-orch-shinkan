@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { StaticImageData } from "next/image";
 import Img from "@/components/Img";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import styles from "@app/introduction/introduction.module.scss";
 import { sectionImages, partImages } from "@/utils/images";
 
@@ -237,6 +238,7 @@ const Introduction = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

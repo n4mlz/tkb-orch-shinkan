@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { StaticImageData } from "next/image";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import Img from "@/components/Img";
 import { activityImages } from "@/utils/images";
 import styles from "@app/activity/activity.module.scss";
@@ -89,6 +90,7 @@ const Activity = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
