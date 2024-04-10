@@ -48,6 +48,9 @@ const Header = (props: Props) => {
             <Link href="/interview">先輩インタビュー</Link>
           </li>
           <li>
+            <Link href="/pamphlet">パンフレット</Link>
+          </li>
+          <li>
             <Link href="/faq">Q&A</Link>
           </li>
           <li>
