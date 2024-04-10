@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import styles from "@app/about/about.module.scss";
 
 export const metadata: Metadata = {
@@ -97,6 +98,7 @@ const About = () => {
           </ul>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

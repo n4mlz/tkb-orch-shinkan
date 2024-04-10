@@ -23,6 +23,12 @@ import icon9 from "@images/interview/icon9.png";
 import faq0 from "@images/faq/faq0.png";
 import faq1 from "@images/faq/faq1.png";
 
+import twitter from "@images/sns/x.png";
+import instagram from "@images/sns/instagram.png";
+import line from "@images/sns/line.png";
+import youtube from "@images/sns/youtube.png";
+import github from "@images/sns/github.png";
+
 import welcomeFestival from "@images/event/welcomeFestival.png";
 import ensembleConcert from "@images/event/ensembleConcert.png";
 import novaHall from "@images/event/novaHall.png";
@@ -57,6 +63,14 @@ const interviewThumbList = [thumb0, thumb1, thumb2, thumb3, thumb4, thumb5, thum
 const interviewIconList = [icon0, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9];
 
 const faqImageList = [faq0, faq1];
+
+const snsIcons = {
+  twitter,
+  instagram,
+  line,
+  youtube,
+  github,
+};
 
 const eventImages = {
   welcomeFestival,
@@ -95,4 +109,13 @@ const partImages = {
   percussion,
 };
 
-export { interviewThumbList, interviewIconList, faqImageList, eventImages, activityImages, sectionImages, partImages };
+export {
+  interviewThumbList,
+  interviewIconList,
+  faqImageList,
+  snsIcons,
+  eventImages,
+  activityImages,
+  sectionImages,
+  partImages,
+};
