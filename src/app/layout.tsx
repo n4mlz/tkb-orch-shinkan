@@ -29,6 +29,19 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    card: "summary_large_image",
+    images: [
+      {
+        url: "/images/ogp.png",
+        width: 1200,
+        height: 630,
+        alt: SITE_NAME,
+      },
+    ],
+  },
 };
 
 const inter = Inter({
