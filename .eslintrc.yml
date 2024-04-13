@@ -26,3 +26,4 @@ rules:
 overrides:
   - files: ["*.ts"]
     parser: "@typescript-eslint/parser"
+ignorePatterns: ["*.config.js"]
