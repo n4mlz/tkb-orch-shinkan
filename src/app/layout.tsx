@@ -31,12 +31,15 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [
       {
-        url: "/images/ogp.png",
+        url: `${SITE_URL}/images/ogp.png`,
         width: 1200,
         height: 630,
         alt: SITE_NAME,
       },
     ],
+  },
+  alternates: {
+    canonical: SITE_URL,
   },
 };
 
